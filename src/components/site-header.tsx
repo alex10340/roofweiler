@@ -1,6 +1,7 @@
 import { MapPin, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import MainNav from "@/components/main-nav";
 
 export default function SiteHeader() {
   return (
@@ -59,50 +60,7 @@ export default function SiteHeader() {
             </div>
 
             {/* Navigation */}
-            <nav>
-              <ul className="flex items-center gap-8 font-medium">
-                <li>
-                  <Link
-                    href="/"
-                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
-                  >
-                    HOME
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services"
-                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
-                  >
-                    SERVICES
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
-                  >
-                    ABOUT US
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
-                  >
-                    CONTACT US
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
-                  >
-                    BLOG
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+            <MainNav />
           </div>
         </div>
       </header>
