@@ -65,7 +65,7 @@ export default function TestimonialCarousel() {
             variant="ghost"
             size="icon"
             onClick={goToPrevious}
-            className="shrink-0 hover:bg-transparent absolute left-0 top-1/2 -translate-y-1/2 z-10"
+            className="shrink-0 hover:bg-transparent absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
             aria-label="Previous testimonial"
           >
             <ChevronLeft
@@ -114,7 +114,7 @@ export default function TestimonialCarousel() {
             variant="ghost"
             size="icon"
             onClick={goToNext}
-            className="shrink-0 hover:bg-transparent absolute right-0 top-1/2 -translate-y-1/2 z-10"
+            className="shrink-0 hover:bg-transparent absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
             aria-label="Next testimonial"
           >
             <ChevronRight

@@ -23,7 +23,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <div className="mb-8 bg-[#1a1a1a] py-16 px-4">
+    <div className="bg-[#1a1a1a] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Blog Title */}
         <h1 className="text-4xl font-bold text-center text-[#ffde11] mb-16">
