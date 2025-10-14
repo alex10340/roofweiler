@@ -1,103 +1,171 @@
+import { MapPin, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
+import EstimateForm from "@/components/estimate-form";
+import ServicesSection from "@/components/services-section";
+import AboutUs from "@/components/about-us";
+import SixPs from "@/components/six-ps";
+import TestimonialCarousel from "@/components/testimonial-carousel";
+import BlogSection from "@/components/blog-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div className="min-h-screen bg-[#1a1a1a]">
+      {/* Top bar with address and links */}
+      <div className="bg-[#a0a09f] text-[#1a1a1a] text-sm">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4" />
+            <span className="font-medium">8555 NW 29TH ST, DORAL FL 33122</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/special-offers"
+              className="hover:text-[#000000] transition-colors"
+            >
+              SPECIAL OFFERS
+            </Link>
+            <Link
+              href="/financing"
+              className="hover:text-[#000000] transition-colors"
+            >
+              FINANCING
+            </Link>
+            <Link
+              href="/service-area"
+              className="hover:text-[#000000] transition-colors"
+            >
+              SERVICE AREA
+            </Link>
+            <button className="relative hover:text-[#000000] transition-colors">
+              <ShoppingCart className="w-5 h-5" />
+              <span className="absolute -top-1 -right-2 bg-[#ffffff] text-[#000000] text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold">
+                0
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Main header with logo and navigation */}
+      <header className="bg-[#000000] text-[#ffffff]">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            {/* Logo section */}
+            <div>
+              <Image
+                src="/assets/logo.webp"
+                alt="Roofweiler - The Ultimate Protector for Your Roof Windows and Doors"
+                width={422}
+                height={58}
+                priority
+              />
+            </div>
+
+            {/* Navigation */}
+            <nav>
+              <ul className="flex items-center gap-8 font-medium">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-[#ffffff] border-b-2 border-[#ffde11] pb-1 hover:text-[#ffde11] transition-colors"
+                  >
+                    HOME
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
+                  >
+                    SERVICES
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
+                  >
+                    ABOUT US
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
+                  >
+                    CONTACT US
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-[#ffffff] hover:text-[#ffde11] transition-colors"
+                  >
+                    BLOG
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative min-h-[600px]">
+        {/* Background Image */}
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/assets/hero.webp"
+          alt="Roofing Services"
+          fill
+          className="object-cover object-top"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-12 w-full">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Left side - Text content */}
+            <div className="text-white max-w-lg pt-12">
+              <h1 className="text-5xl font-bold mb-8 leading-tight">
+                Experience the RoofWeiler Difference Today!
+              </h1>
+              <p className="text-[#ffde11] text-xl md:text-2xl mb-6">
+                We're a roofing and windows contractor that strives for honesty,
+                commitment, friendliness, and responsibility in all aspects of
+                our work.
+              </p>
+              <p className="text-[#ffde11] text-xl md:text-2xl ">
+                Let us help you enhance your home with high-quality services
+                that are second to none!
+              </p>
+            </div>
+
+            {/* Right side - Form */}
+            <div>
+              <EstimateForm />
+            </div>
+          </div>
         </div>
+      </section>
+
+      {/* Additional sections */}
+      <main className="max-w-7xl mx-auto px-4 py-12">
+        <ServicesSection />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <AboutUs />
+
+      <SixPs />
+
+      <TestimonialCarousel />
+
+      <BlogSection />
+
+      <Footer />
     </div>
   );
 }
