@@ -47,7 +47,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="max-w-[500px] shadow-2xl border border-gray-500">
+          <div className="max-w-[500px]">
             <ContactForm />
           </div>
         </div>

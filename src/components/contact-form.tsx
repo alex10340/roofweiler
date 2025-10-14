@@ -1,12 +1,18 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -18,22 +24,24 @@ export default function ContactForm() {
     productOfInterest: "",
     projectTimeFrame: "",
     consent: false,
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
 
   return (
-    <div className="bg-white p-8">
+    <div className="bg-white p-8 border-gray-300 border shadow-xl">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <Input
             type="text"
             placeholder="First Name *"
             value={formData.firstName}
-            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, firstName: e.target.value })
+            }
             className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
             required
           />
@@ -44,7 +52,9 @@ export default function ContactForm() {
             type="text"
             placeholder="Last name *"
             value={formData.lastName}
-            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, lastName: e.target.value })
+            }
             className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
             required
           />
@@ -55,7 +65,9 @@ export default function ContactForm() {
             type="tel"
             placeholder="Phone *"
             value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
             className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
             required
           />
@@ -66,7 +78,9 @@ export default function ContactForm() {
             type="email"
             placeholder="E-mail *"
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
             className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
             required
           />
@@ -77,7 +91,9 @@ export default function ContactForm() {
             type="text"
             placeholder="Address *"
             value={formData.address}
-            onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, address: e.target.value })
+            }
             className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
             required
           />
@@ -86,7 +102,9 @@ export default function ContactForm() {
         <div>
           <Select
             value={formData.productOfInterest}
-            onValueChange={(value) => setFormData({ ...formData, productOfInterest: value })}
+            onValueChange={(value) =>
+              setFormData({ ...formData, productOfInterest: value })
+            }
           >
             <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
               <SelectValue placeholder="Product Of Interest? *" />
@@ -96,8 +114,12 @@ export default function ContactForm() {
               <SelectItem value="metal-roof">Metal Roof</SelectItem>
               <SelectItem value="shingles-roof">Shingles Roof</SelectItem>
               <SelectItem value="tile-roof">Tile Roof</SelectItem>
-              <SelectItem value="stone-coated-metal">Stone Coated Metal</SelectItem>
-              <SelectItem value="windows-and-doors">Windows and Doors</SelectItem>
+              <SelectItem value="stone-coated-metal">
+                Stone Coated Metal
+              </SelectItem>
+              <SelectItem value="windows-and-doors">
+                Windows and Doors
+              </SelectItem>
               <SelectItem value="solatube">Solatube</SelectItem>
               <SelectItem value="roof-cleaning">Roof Cleaning</SelectItem>
               <SelectItem value="repairs">Repairs</SelectItem>
@@ -110,7 +132,9 @@ export default function ContactForm() {
         <div>
           <Select
             value={formData.projectTimeFrame}
-            onValueChange={(value) => setFormData({ ...formData, projectTimeFrame: value })}
+            onValueChange={(value) =>
+              setFormData({ ...formData, projectTimeFrame: value })
+            }
           >
             <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
               <SelectValue placeholder="Project Time Frame?" />
@@ -128,11 +152,19 @@ export default function ContactForm() {
           <Checkbox
             id="consent"
             checked={formData.consent}
-            onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
+            onCheckedChange={(checked) =>
+              setFormData({ ...formData, consent: checked as boolean })
+            }
             className="mt-1 border-gray-400"
           />
-          <label htmlFor="consent" className="text-xs text-gray-500 leading-tight">
-            By clicking a submission button, I agree to Consent to receiving personalized marketing text messages and emails. To inform me about booking my free consultation, remind me of meeting, and extend any promotional deal. *
+          <label
+            htmlFor="consent"
+            className="text-xs text-gray-500 leading-tight"
+          >
+            By clicking a submission button, I agree to Consent to receiving
+            personalized marketing text messages and emails. To inform me about
+            booking my free consultation, remind me of meeting, and extend any
+            promotional deal. *
           </label>
         </div>
 
@@ -144,11 +176,14 @@ export default function ContactForm() {
         </Button>
 
         <div className="text-center">
-          <a href="#" className="text-xs text-gray-400 inline-flex items-center gap-1">
+          <a
+            href="#"
+            className="text-xs text-gray-400 inline-flex items-center gap-1"
+          >
             Report abuse
           </a>
         </div>
       </form>
     </div>
-  )
+  );
 }

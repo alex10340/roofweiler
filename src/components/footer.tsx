@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="w-full">
       {/* Top bar with contact info and social */}
       <div className="bg-[#a0a09f] py-6 px-6">
-        <div className="max-w-5xl font-medium mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-8">
+        <div className="max-w-5xl font-medium mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
             <a
               href="tel:9547873535"
               className="flex items-center gap-2 text-[#ffffff] hover:opacity-80 transition-opacity"
@@ -24,16 +24,20 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-[#ffffff]">FOLLOW US ON</span>
+            <span className="text-[#ffffff] text-sm md:text-base">FOLLOW US ON</span>
             <a
-              href="#"
+              href="https://www.facebook.com/roofweiler"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#ffffff] hover:opacity-80 transition-opacity"
               aria-label="Facebook"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://instagram.com/roofweiler/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#ffffff] hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >

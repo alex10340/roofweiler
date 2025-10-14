@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-export default function BlogSection() {
+interface BlogSectionProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function BlogSection({
+  title = "BLOG",
+  subtitle,
+}: BlogSectionProps = {}) {
   const blogPosts = [
     {
       image: "/assets/blog1.webp",
@@ -26,9 +34,16 @@ export default function BlogSection() {
     <div className="bg-[#1a1a1a] py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Blog Title */}
-        <h1 className="text-4xl font-bold text-center text-[#ffde11] mb-16">
-          BLOG
-        </h1>
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#ffde11] mb-2">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-white text-xl md:text-2xl font-semibold">
+              {subtitle}
+            </p>
+          )}
+        </div>
 
         {/* Blog Cards Grid */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
