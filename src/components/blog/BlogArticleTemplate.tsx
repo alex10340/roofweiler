@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface BlogSection {
   type: "paragraph" | "heading" | "list" | "numbered-list";
@@ -15,6 +16,8 @@ export interface BlogArticleData {
   image: string;
   imageAlt: string;
   title: string;
+  metaTitle: string;
+  metaDescription: string;
   introduction: string;
   sections: Array<{
     heading: string;
@@ -176,35 +179,45 @@ export default function BlogArticleTemplate({ data }: BlogArticleTemplateProps) 
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {data.relatedArticles.map((article, index) => (
-              <article
-                key={index}
-                className="bg-[#2a2a2a] rounded-lg overflow-hidden hover:bg-[#323232] transition-colors"
-              >
-                <div className="relative h-[200px] w-full">
-                  <Image
-                    src={article.image}
-                    alt={article.imageAlt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-[#ffde11] mb-2">
-                    {article.category}
+            {data.relatedArticles.map((article, index) => {
+              const ArticleContent = (
+                <article
+                  key={index}
+                  className="bg-[#2a2a2a] rounded-lg overflow-hidden hover:bg-[#323232] transition-colors h-full"
+                >
+                  <div className="relative h-[200px] w-full">
+                    <Image
+                      src={article.image}
+                      alt={article.imageAlt}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#ffffff] mb-2">
-                    {article.title}
-                  </h3>
-                  <p className="text-[#a0a09f] text-sm mb-4">
-                    {article.excerpt}
-                  </p>
-                  <div className="text-sm text-[#6e6e6e]">
-                    {article.date} • {article.readTime}
+                  <div className="p-6">
+                    <div className="text-sm text-[#ffde11] mb-2">
+                      {article.category}
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#ffffff] mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-[#a0a09f] text-sm mb-4">
+                      {article.excerpt}
+                    </p>
+                    <div className="text-sm text-[#6e6e6e]">
+                      {article.date} • {article.readTime}
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+
+              return article.slug ? (
+                <Link key={index} href={`/blog/${article.slug}`} className="block">
+                  {ArticleContent}
+                </Link>
+              ) : (
+                ArticleContent
+              );
+            })}
           </div>
         </section>
       </article>

@@ -3,10 +3,10 @@ import { blogArticles } from "@/data/blogArticles";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: blogArticles["hurricane-preparation"].metaTitle,
-  description: blogArticles["hurricane-preparation"].metaDescription,
+  title: blogArticles["choosing-perfect-windows"].metaTitle,
+  description: blogArticles["choosing-perfect-windows"].metaDescription,
 };
 
 export default function BlogPost() {
-  return <BlogArticleTemplate data={blogArticles["hurricane-preparation"]} />;
+  return <BlogArticleTemplate data={blogArticles["choosing-perfect-windows"]} />;
 }

@@ -57,7 +57,7 @@ const blogPosts = [
     image: "/assets/blog4.webp",
     views: "8 views",
     comments: "0 comments",
-    slug: null,
+    slug: "hurricane-preparation",
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ const blogPosts = [
     image: "/assets/blog5.webp",
     views: "7 views",
     comments: "0 comments",
-    slug: null,
+    slug: "ultimate-guide-impact-windows",
   },
   {
     id: 6,
@@ -85,7 +85,7 @@ const blogPosts = [
     image: "/assets/blog6.webp",
     views: "8 views",
     comments: "0 comments",
-    slug: null,
+    slug: "impact-windows-replacement",
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ const blogPosts = [
     image: "/assets/blog7.webp",
     views: "7 views",
     comments: "0 comments",
-    slug: null,
+    slug: "roofing-replacement-cost",
   },
   {
     id: 8,
@@ -112,7 +112,7 @@ const blogPosts = [
     image: "/assets/blog8.webp",
     views: "2 views",
     comments: "0 comments",
-    slug: null,
+    slug: "metal-roofing-advantages",
   },
   {
     id: 9,
@@ -125,7 +125,7 @@ const blogPosts = [
     image: "/assets/blog9.webp",
     views: "2 views",
     comments: "0 comments",
-    slug: null,
+    slug: "roof-maintenance-guide",
   },
   {
     id: 10,
@@ -138,7 +138,7 @@ const blogPosts = [
     image: "/assets/blog10.webp",
     views: "1 view",
     comments: "0 comments",
-    slug: null,
+    slug: "choosing-perfect-windows",
   },
 ];
 
