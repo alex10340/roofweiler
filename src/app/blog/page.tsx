@@ -3,7 +3,7 @@
 import { MoreVertical, Eye, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useBlogFilter } from "./layout";
+import { useBlogFilter } from "@/contexts/BlogFilterContext";
 
 const blogPosts = [
   {

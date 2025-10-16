@@ -1,17 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-
-const BlogFilterContext = createContext<{
-  activeFilter: string;
-  setActiveFilter: (filter: string) => void;
-}>({
-  activeFilter: "All Posts",
-  setActiveFilter: () => {},
-});
-
-export const useBlogFilter = () => useContext(BlogFilterContext);
+import BlogFilterContext from "@/contexts/BlogFilterContext";
 
 export default function BlogLayout({
   children,

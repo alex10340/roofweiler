@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { UserIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function RoofWeilerCareers() {
   const [activeTab, setActiveTab] = useState<"sales" | "canvasser">("sales");
@@ -170,11 +171,11 @@ export default function RoofWeilerCareers() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <Link href="#" className="text-center mt-12">
             <Button className="bg-[#ffde11] text-black hover:bg-[#ffde11]/90 font-bold px-8 h-11 rounded-md">
               APPLY FOR JOB!
             </Button>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -216,34 +217,67 @@ export default function RoofWeilerCareers() {
                 <h3 className="text-2xl font-bold mb-6">Sales Consultant</h3>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-bold mb-3">What Can We Offer You:</h4>
+                  <h4 className="text-lg font-bold mb-3">
+                    What Can We Offer You:
+                  </h4>
                   <ul className="list-disc list-inside space-y-2 ml-2">
-                    <li>Earn $150,000 to $200,000+ per year in uncapped commissions</li>
+                    <li>
+                      Earn $150,000 to $200,000+ per year in uncapped
+                      commissions
+                    </li>
                     <li>Top representatives earn up to 400,000+ per year</li>
-                    <li>ALL leads are provided to you, no cold calling or door knocking!</li>
+                    <li>
+                      ALL leads are provided to you, no cold calling or door
+                      knocking!
+                    </li>
                     <li>Motivated and high performing culture</li>
                     <li>State of the art training program</li>
                     <li>Annual trip and perks to top consultants</li>
-                    <li>Receive world-class training, no experience required</li>
-                    <li>Work with a team of talented, professional, and fun individuals who enjoy what they do</li>
-                    <li>Represent high quality products with the top 1% of professionals in the industry</li>
+                    <li>
+                      Receive world-class training, no experience required
+                    </li>
+                    <li>
+                      Work with a team of talented, professional, and fun
+                      individuals who enjoy what they do
+                    </li>
+                    <li>
+                      Represent high quality products with the top 1% of
+                      professionals in the industry
+                    </li>
                   </ul>
                 </div>
 
                 <p className="mb-6">
-                  As a professional outside sales representative, you'll be trained to deliver interactive presentations that will refine your communication skills and negotiation tactics to excel in this role. To set you up for success, our marketing teams supply you with pre-qualified leads. We do the legwork - You do not have to generate your own clients. We'll train you well and give you the support that you need to grow. We will train you thoroughly and quickly. Then, we'll watch you earn more money than you thought possible at this stage of your career.
+                  As a professional outside sales representative, you'll be
+                  trained to deliver interactive presentations that will refine
+                  your communication skills and negotiation tactics to excel in
+                  this role. To set you up for success, our marketing teams
+                  supply you with pre-qualified leads. We do the legwork - You
+                  do not have to generate your own clients. We'll train you well
+                  and give you the support that you need to grow. We will train
+                  you thoroughly and quickly. Then, we'll watch you earn more
+                  money than you thought possible at this stage of your career.
                 </p>
 
                 <div className="mb-6">
                   <h4 className="text-lg font-bold mb-3">What You'll Do:</h4>
                   <ul className="list-disc list-inside space-y-2 ml-2">
-                    <li>Deliver interactive sales presentations on our products & services to decision-makers at their homes</li>
-                    <li>Apply consistent effort and a great attitude to meet sales goals</li>
+                    <li>
+                      Deliver interactive sales presentations on our products &
+                      services to decision-makers at their homes
+                    </li>
+                    <li>
+                      Apply consistent effort and a great attitude to meet sales
+                      goals
+                    </li>
                     <li>Set individual sales targets</li>
                     <li>Track sales goals and report results</li>
                     <li>Promote company products and services</li>
                     <li>Develop, present, and negotiate sales contracts</li>
-                    <li>Work a full schedule, including weekend and holiday flexibility</li>
+                    <li>
+                      Work a full schedule, including weekend and holiday
+                      flexibility
+                    </li>
                   </ul>
                 </div>
 
@@ -254,16 +288,27 @@ export default function RoofWeilerCareers() {
                     <li>Exceptional customer service skills</li>
                     <li>Ability to work evening and Saturday appointments</li>
                     <li>Personal vehicle with valid driver's license</li>
-                    <li>In-Home Sales or Business to Consumer Sales experience preferred</li>
-                    <li>Windows and Doors, bath remodeling, roofing, HVAC sales experience - a plus!</li>
-                    <li>Bilingual skills in English and Spanish/Español - a plus!</li>
+                    <li>
+                      In-Home Sales or Business to Consumer Sales experience
+                      preferred
+                    </li>
+                    <li>
+                      Windows and Doors, bath remodeling, roofing, HVAC sales
+                      experience - a plus!
+                    </li>
+                    <li>
+                      Bilingual skills in English and Spanish/Español - a plus!
+                    </li>
                     <li>Ability to meet and exceed goals</li>
-                    <li>Work successfully without requiring close supervision</li>
+                    <li>
+                      Work successfully without requiring close supervision
+                    </li>
                   </ul>
                 </div>
 
                 <p className="text-sm">
-                  This is a full-time sales representative position. Criminal Background Checks.
+                  This is a full-time sales representative position. Criminal
+                  Background Checks.
                 </p>
               </div>
             ) : (
@@ -271,7 +316,9 @@ export default function RoofWeilerCareers() {
                 <h3 className="text-2xl font-bold mb-6">Canvasser Role</h3>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-bold mb-3">What Can We Offer You:</h4>
+                  <h4 className="text-lg font-bold mb-3">
+                    What Can We Offer You:
+                  </h4>
                   <ul className="list-disc list-inside space-y-2 ml-2">
                     <li>5% Commission with a $500/week base</li>
                     <li>Earning potential $1,600 - $3,000 Weekly</li>
@@ -283,20 +330,42 @@ export default function RoofWeilerCareers() {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-bold mb-3">Responsibilities: What You'll Do:</h4>
+                  <h4 className="text-lg font-bold mb-3">
+                    Responsibilities: What You'll Do:
+                  </h4>
                   <ul className="list-disc list-inside space-y-2 ml-2">
-                    <li>Engage in door-to-door canvassing in selected neighborhoods to raise brand awareness for RoofWeiler</li>
-                    <li>Schedule free in-home consultations with homeowners for our projects</li>
-                    <li>Promote RoofWeiler products and services, emphasizing eco-friendly, quality solutions such as energy-efficient impact windows/doors and roofing systems</li>
-                    <li>Deliver engaging marketing presentations to prospective and existing clients</li>
-                    <li>Demonstrate flexibility and willingness to work outdoors in various weather conditions</li>
+                    <li>
+                      Engage in door-to-door canvassing in selected
+                      neighborhoods to raise brand awareness for RoofWeiler
+                    </li>
+                    <li>
+                      Schedule free in-home consultations with homeowners for
+                      our projects
+                    </li>
+                    <li>
+                      Promote RoofWeiler products and services, emphasizing
+                      eco-friendly, quality solutions such as energy-efficient
+                      impact windows/doors and roofing systems
+                    </li>
+                    <li>
+                      Deliver engaging marketing presentations to prospective
+                      and existing clients
+                    </li>
+                    <li>
+                      Demonstrate flexibility and willingness to work outdoors
+                      in various weather conditions
+                    </li>
                   </ul>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="text-lg font-bold mb-3">Qualifications: What you'll bring:</h4>
+                  <h4 className="text-lg font-bold mb-3">
+                    Qualifications: What you'll bring:
+                  </h4>
                   <ul className="list-disc list-inside space-y-2 ml-2">
-                    <li>Outgoing personality with excellent interpersonal skills</li>
+                    <li>
+                      Outgoing personality with excellent interpersonal skills
+                    </li>
                     <li>Confidence and enthusiasm in public speaking</li>
                     <li>Thrive in a high-energy environment</li>
                     <li>Positive, energetic, and upbeat attitude</li>
@@ -363,7 +432,9 @@ export default function RoofWeilerCareers() {
                 </div>
 
                 <p className="italic">
-                  If you're ready to embark on an exciting career with a dynamic company, apply now! Join us at RoofWeiler and be a part of our journey towards growth and success.
+                  If you're ready to embark on an exciting career with a dynamic
+                  company, apply now! Join us at RoofWeiler and be a part of our
+                  journey towards growth and success.
                 </p>
               </div>
             )}
