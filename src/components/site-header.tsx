@@ -11,7 +11,9 @@ export default function SiteHeader() {
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <div className="flex items-center gap-1 sm:gap-2 overflow-hidden">
             <MapPin className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-            <span className="font-medium truncate text-[10px] sm:text-sm">8555 NW 29TH ST, DORAL FL 33122</span>
+            <span className="font-medium truncate text-[10px] sm:text-sm">
+              8555 NW 29TH ST, DORAL FL 33122
+            </span>
           </div>
           <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
             <Link
@@ -32,12 +34,12 @@ export default function SiteHeader() {
             >
               SERVICE AREA
             </Link>
-            <button className="relative hover:text-[#000000] transition-colors">
+            {/* <button className="relative hover:text-[#000000] transition-colors">
               <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="absolute -top-1 -right-2 bg-[#ffffff] text-[#000000] text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold">
                 0
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

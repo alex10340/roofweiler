@@ -193,7 +193,7 @@ export default function Footer() {
                   <span>Privacy Policy</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/gear"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
@@ -201,7 +201,7 @@ export default function Footer() {
                   <span className="text-[#ffde11]">›</span>
                   <span>Gear</span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
