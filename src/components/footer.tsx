@@ -94,7 +94,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/roofing"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -103,7 +103,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/roofing"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -112,7 +112,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/roofing"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -121,7 +121,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/roofing"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -130,7 +130,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/roofing"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -148,7 +148,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -157,7 +157,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/about-us"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -166,7 +166,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/contact"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -184,7 +184,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/privacy-policy"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>

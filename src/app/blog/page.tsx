@@ -2,20 +2,22 @@
 
 import { MoreVertical, Eye, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import Link from "next/link";
+import { useBlogFilter } from "./layout";
 
 const blogPosts = [
   {
     id: 1,
     category: "Roofing",
-    date: "Aug 1, 2024",
-    readTime: "4 min read",
+    date: "Aug 2, 2024",
+    readTime: "3 min read",
     title: "Clean Roof Lasts Longer",
     excerpt:
       "Maintaining a clean roof is crucial for homeowners in Miami-Dade, Broward, and Palm Beach Counties.",
     image: "/assets/blog1.webp",
     views: "12 views",
     comments: "0 comments",
+    slug: "/blog/clean-roof-lasts-longer",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const blogPosts = [
     image: "/assets/blog2.webp",
     views: "18 views",
     comments: "0 comments",
+    slug: "/blog/blog-impact-windows-in-florida",
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ const blogPosts = [
     image: "/assets/blog3.webp",
     views: "16 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 4,
@@ -53,6 +57,7 @@ const blogPosts = [
     image: "/assets/blog4.webp",
     views: "8 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 5,
@@ -66,6 +71,7 @@ const blogPosts = [
     image: "/assets/blog5.webp",
     views: "7 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 6,
@@ -79,6 +85,7 @@ const blogPosts = [
     image: "/assets/blog6.webp",
     views: "8 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 7,
@@ -91,6 +98,7 @@ const blogPosts = [
     image: "/assets/blog7.webp",
     views: "7 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 8,
@@ -104,6 +112,7 @@ const blogPosts = [
     image: "/assets/blog8.webp",
     views: "2 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 9,
@@ -116,6 +125,7 @@ const blogPosts = [
     image: "/assets/blog9.webp",
     views: "2 views",
     comments: "0 comments",
+    slug: null,
   },
   {
     id: 10,
@@ -128,11 +138,12 @@ const blogPosts = [
     image: "/assets/blog10.webp",
     views: "1 view",
     comments: "0 comments",
+    slug: null,
   },
 ];
 
 export default function BlogListingPage() {
-  const [activeFilter, setActiveFilter] = useState<string>("All Posts");
+  const { activeFilter } = useBlogFilter();
 
   const filteredPosts = blogPosts.filter((post) => {
     if (activeFilter === "All Posts") return true;
@@ -141,107 +152,94 @@ export default function BlogListingPage() {
 
   return (
     <div className="min-h-screen bg-[#1a1a1a]">
-      {/* Navigation Tabs */}
-      <nav className="border-b border-[#2a2a2a]">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex gap-8">
-            <button
-              onClick={() => setActiveFilter("All Posts")}
-              className={`py-4 transition-colors ${
-                activeFilter === "All Posts"
-                  ? "text-[#ffde11] border-b-2 border-[#ffde11] font-medium"
-                  : "text-[#a0a09f] hover:text-[#ffffff]"
-              }`}
-            >
-              All Posts
-            </button>
-            <button
-              onClick={() => setActiveFilter("Roofing")}
-              className={`py-4 transition-colors ${
-                activeFilter === "Roofing"
-                  ? "text-[#ffde11] border-b-2 border-[#ffde11] font-medium"
-                  : "text-[#a0a09f] hover:text-[#ffffff]"
-              }`}
-            >
-              Roofing
-            </button>
-            <button
-              onClick={() => setActiveFilter("Windows & Doors")}
-              className={`py-4 transition-colors ${
-                activeFilter === "Windows & Doors"
-                  ? "text-[#ffde11] border-b-2 border-[#ffde11] font-medium"
-                  : "text-[#a0a09f] hover:text-[#ffffff]"
-              }`}
-            >
-              Windows & Doors
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Blog Posts Grid */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="space-y-6">
-          {filteredPosts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
-            >
-              {/* Post Image */}
-              <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
+        {filteredPosts.map((post) => (
+          <article
+            key={post.id}
+            className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
+          >
+            {/* Post Image */}
+            <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
+              {post.slug ? (
+                <Link href={post.slug}>
+                  <img
+                    src={post.image || "/placeholder.svg"}
+                    alt={post.title}
+                    className="w-full h-full object-cover cursor-pointer"
+                  />
+                </Link>
+              ) : (
                 <img
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
                   className="w-full h-full object-cover"
                 />
+              )}
+            </div>
+
+            {/* Post Content */}
+            <div className="flex-1 min-w-0">
+              {/* Meta Information */}
+              <div className="flex items-center gap-2 text-sm text-[#a0a09f] mb-2">
+                <span className="text-[#ffde11]">{post.category}</span>
+                <span>•</span>
+                <span>{post.date}</span>
+                <span>•</span>
+                <span>{post.readTime}</span>
               </div>
 
-              {/* Post Content */}
-              <div className="flex-1 min-w-0">
-                {/* Meta Information */}
-                <div className="flex items-center gap-2 text-sm text-[#a0a09f] mb-2">
-                  <span className="text-[#ffde11]">{post.category}</span>
-                  <span>•</span>
-                  <span>{post.date}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
-                </div>
-
-                {/* Title */}
+              {/* Title */}
+              {post.slug ? (
+                <Link href={post.slug}>
+                  <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2 hover:text-[#ffde11] transition-colors cursor-pointer">
+                    {post.title}
+                  </h2>
+                </Link>
+              ) : (
                 <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2">
                   {post.title}
                 </h2>
+              )}
 
-                {/* Excerpt */}
+              {/* Excerpt */}
+              {post.slug ? (
+                <Link href={post.slug}>
+                  <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2 cursor-pointer">
+                    {post.excerpt}
+                  </p>
+                </Link>
+              ) : (
                 <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
+              )}
 
-                {/* Footer */}
-                <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
-                  <div className="flex items-center gap-1">
-                    <Eye className="w-4 h-4" />
-                    <span>{post.views}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MessageSquare className="w-4 h-4" />
-                    <span>{post.comments}</span>
-                  </div>
+              {/* Footer */}
+              <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
+                <div className="flex items-center gap-1">
+                  <Eye className="w-4 h-4" />
+                  <span>{post.views}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MessageSquare className="w-4 h-4" />
+                  <span>{post.comments}</span>
                 </div>
               </div>
+            </div>
 
-              {/* More Options Button */}
-              <div className="flex-shrink-0">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-[#6e6e6e] hover:text-[#ffffff] hover:bg-[#3a3a3a]"
-                >
-                  <MoreVertical className="w-5 h-5" />
-                </Button>
-              </div>
-            </article>
-          ))}
+            {/* More Options Button */}
+            <div className="flex-shrink-0">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-[#6e6e6e] hover:text-[#ffffff] hover:bg-[#3a3a3a]"
+              >
+                <MoreVertical className="w-5 h-5" />
+              </Button>
+            </div>
+          </article>
+        ))}
         </div>
       </main>
     </div>

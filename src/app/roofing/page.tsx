@@ -19,7 +19,7 @@ export default function RoofingPage() {
   return (
     <main>
       <RoofingHero />
-      <p className="h-[120px] flex items-center justify-center text-[38px] font-bold">
+      <p className="min-h-[120px] h-fit text-center py-[20px] flex items-center justify-center text-[38px] font-bold">
         Top-Quality Roofing To Last a Lifetime Guaranteed 
       </p>
       <IssuesSection />
