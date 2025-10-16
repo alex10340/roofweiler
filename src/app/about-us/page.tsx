@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export const metadata = {
+  title: "RoofWeiler | About Us, Mission, Vision and Values",
   alternates: {
     canonical: "/about-us",
   },

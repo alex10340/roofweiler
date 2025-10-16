@@ -60,7 +60,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/service-areas"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -69,16 +69,16 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/service-areas"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
-                  <span>Boward</span>
+                  <span>Broward</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/service-areas"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -96,7 +96,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/roofing"
+                  href="/metal-roof"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/roofing"
+                  href="/tile-roof"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -114,7 +114,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/roofing"
+                  href="/shingles-roof"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -123,7 +123,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/roofing"
+                  href="/stone-coated-roof"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -132,7 +132,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/roofing"
+                  href="/windows-and-doors"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
@@ -195,7 +195,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/gear"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>
