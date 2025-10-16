@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://roofweiler.com"),
-  title: "RoofWeiler",
+  title: "RoofWeiler | Roof Replacement, Impact Windows and Doors",
   description:
-    "Discover Roofweiler, your trusted partner for premium roofing and windows solutions in Miami-Dade, Broward, and Palm Beach counties. Specializing in roof replacement & Repair, impact windows, and Solatube skylights, our expert team prioritizes client satisfaction with a transparent, friendly approach. With five-star reviews and a commitment to hurricane-ready protection, Roofweiler delivers exceptional craftsmanship and peace of mind. Trust us to safeguard your home in style.",
+    "Welcome to Roofweiler, your premier destination for roof replacement and impact windows in Miami-Dade, Broward, and Palm Beach counties. Our expert team specializes in roofing metal, roofing shingles, and roofing tile, ensuring your home is protected and hurricane-ready. With a client-first approach and five-star reviews, we guide you through every step, offering durable solutions that keep your home safe and stylish. Trust Roofweiler for quality and peace of mind.",
   alternates: {
     canonical: "/",
   },
