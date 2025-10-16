@@ -209,7 +209,7 @@ export default function BlogListingPage() {
               </div>
 
               {/* More Options Button */}
-              <div className="flex-shrink-0">
+              {/* <div className="flex-shrink-0">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -217,7 +217,7 @@ export default function BlogListingPage() {
                 >
                   <MoreVertical className="w-5 h-5" />
                 </Button>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>
