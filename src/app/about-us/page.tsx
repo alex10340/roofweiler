@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+export const metadata = {
+  alternates: {
+    canonical: "/about-us",
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">

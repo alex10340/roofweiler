@@ -9,6 +9,12 @@ import QuoteSection from "@/components/quote-section";
 import TestimonialCarousel from "@/components/testimonial-carousel";
 import BlogSection from "@/components/blog-section";
 
+export const metadata = {
+  alternates: {
+    canonical: "/roofing",
+  },
+};
+
 export default function RoofingPage() {
   return (
     <main>
