@@ -1,8 +1,8 @@
 "use client";
 
-import { MoreVertical, Eye, MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MoreVertical, Eye, MessageSquare, Heart } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -179,66 +179,76 @@ export default function BlogListingPage() {
         </div>
       </nav>
 
-      {/* Blog Posts Grid */}
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      {/* Blog Posts List */}
+      <main className="max-w-7xl mx-auto px-4 py-12">
         <div className="space-y-6">
           {filteredPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
+              className="bg-[#6e6e6e] rounded-lg overflow-hidden hover:shadow-2xl transition-shadow cursor-pointer group flex flex-col sm:flex-row h-auto sm:h-[340px]"
             >
               {/* Post Image */}
-              <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
-                <img
-                  src={post.image || "/placeholder.svg"}
+              <div className="relative w-full sm:w-[454px] h-[280px] sm:h-[340px] flex-shrink-0 overflow-hidden">
+                <Image
+                  src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               {/* Post Content */}
-              <div className="flex-1 min-w-0">
-                {/* Meta Information */}
-                <div className="flex items-center gap-2 text-sm text-[#a0a09f] mb-2">
-                  <span className="text-[#ffde11]">{post.category}</span>
-                  <span>•</span>
-                  <span>{post.date}</span>
-                  <span>•</span>
-                  <span>{post.readTime}</span>
+              <div className="flex-1 p-6 flex flex-col justify-between relative">
+                {/* More Options Button */}
+                <button className="absolute top-4 right-4 p-2">
+                  <MoreVertical className="w-5 h-5 text-white" />
+                </button>
+
+                <div>
+                  {/* Meta Information */}
+                  <div className="flex items-center gap-2 text-sm text-white mb-3">
+                    <span>{post.date}</span>
+                    <span>•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  {/* Category */}
+                  <div className="mb-3">
+                    <span className="text-white font-medium">
+                      {post.category}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-white text-2xl font-bold mb-4 line-clamp-2 leading-tight">
+                    {post.title}
+                  </h2>
+
+                  {/* Excerpt */}
+                  <p className="text-white text-base mb-6 line-clamp-2 leading-relaxed">
+                    {post.excerpt}
+                  </p>
                 </div>
 
-                {/* Title */}
-                <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2">
-                  {post.title}
-                </h2>
-
-                {/* Excerpt */}
-                <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2">
-                  {post.excerpt}
-                </p>
-
-                {/* Footer */}
-                <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
-                  <div className="flex items-center gap-1">
-                    <Eye className="w-4 h-4" />
-                    <span>{post.views}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MessageSquare className="w-4 h-4" />
-                    <span>{post.comments}</span>
+                {/* Divider */}
+                <div className="border-t border-white/20 pt-4">
+                  {/* Footer */}
+                  <div className="flex items-center justify-between text-sm text-white">
+                    <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-2">
+                        <Eye className="w-4 h-4" />
+                        <span>{post.views}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MessageSquare className="w-4 h-4" />
+                        <span>{post.comments}</span>
+                      </div>
+                    </div>
+                    <button className="hover:text-red-400 transition-colors">
+                      <Heart className="w-5 h-5" />
+                    </button>
                   </div>
                 </div>
-              </div>
-
-              {/* More Options Button */}
-              <div className="flex-shrink-0">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-[#6e6e6e] hover:text-[#ffffff] hover:bg-[#3a3a3a]"
-                >
-                  <MoreVertical className="w-5 h-5" />
-                </Button>
               </div>
             </article>
           ))}
