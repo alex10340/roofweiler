@@ -24,7 +24,9 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-[#ffffff] text-sm md:text-base">FOLLOW US ON</span>
+            <span className="text-[#ffffff] text-sm md:text-base">
+              FOLLOW US ON
+            </span>
             <a
               href="https://www.facebook.com/roofweiler"
               target="_blank"
@@ -175,7 +177,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/careers"
                   className="flex items-center gap-2 text-[#ffffff] hover:text-[#ffde11] transition-colors"
                 >
                   <span className="text-[#ffde11]">›</span>

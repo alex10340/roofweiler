@@ -17,7 +17,7 @@ const blogPosts = [
     image: "/assets/blog1.webp",
     views: "12 views",
     comments: "0 comments",
-    slug: "/blog/clean-roof-lasts-longer",
+    slug: "clean-roof-lasts-longer",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const blogPosts = [
     image: "/assets/blog2.webp",
     views: "18 views",
     comments: "0 comments",
-    slug: "/blog/blog-impact-windows-in-florida",
+    slug: "impact-windows-in-florida",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const blogPosts = [
     image: "/assets/blog3.webp",
     views: "16 views",
     comments: "0 comments",
-    slug: null,
+    slug: "modified-bitumen-roofing-systems",
   },
   {
     id: 4,
@@ -154,92 +154,92 @@ export default function BlogListingPage() {
     <div className="min-h-screen bg-[#1a1a1a]">
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="space-y-6">
-        {filteredPosts.map((post) => (
-          <article
-            key={post.id}
-            className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
-          >
-            {/* Post Image */}
-            <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
-              {post.slug ? (
-                <Link href={post.slug}>
+          {filteredPosts.map((post) => (
+            <article
+              key={post.id}
+              className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
+            >
+              {/* Post Image */}
+              <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
+                {post.slug ? (
+                  <Link href={`/blog/${post.slug}`}>
+                    <img
+                      src={post.image || "/placeholder.svg"}
+                      alt={post.title}
+                      className="w-full h-full object-cover cursor-pointer"
+                    />
+                  </Link>
+                ) : (
                   <img
                     src={post.image || "/placeholder.svg"}
                     alt={post.title}
-                    className="w-full h-full object-cover cursor-pointer"
+                    className="w-full h-full object-cover"
                   />
-                </Link>
-              ) : (
-                <img
-                  src={post.image || "/placeholder.svg"}
-                  alt={post.title}
-                  className="w-full h-full object-cover"
-                />
-              )}
-            </div>
-
-            {/* Post Content */}
-            <div className="flex-1 min-w-0">
-              {/* Meta Information */}
-              <div className="flex items-center gap-2 text-sm text-[#a0a09f] mb-2">
-                <span className="text-[#ffde11]">{post.category}</span>
-                <span>•</span>
-                <span>{post.date}</span>
-                <span>•</span>
-                <span>{post.readTime}</span>
+                )}
               </div>
 
-              {/* Title */}
-              {post.slug ? (
-                <Link href={post.slug}>
-                  <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2 hover:text-[#ffde11] transition-colors cursor-pointer">
+              {/* Post Content */}
+              <div className="flex-1 min-w-0">
+                {/* Meta Information */}
+                <div className="flex items-center gap-2 text-sm text-[#a0a09f] mb-2">
+                  <span className="text-[#ffde11]">{post.category}</span>
+                  <span>•</span>
+                  <span>{post.date}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+
+                {/* Title */}
+                {post.slug ? (
+                  <Link href={`/blog/${post.slug}`}>
+                    <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2 hover:text-[#ffde11] transition-colors cursor-pointer">
+                      {post.title}
+                    </h2>
+                  </Link>
+                ) : (
+                  <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2">
                     {post.title}
                   </h2>
-                </Link>
-              ) : (
-                <h2 className="text-[#ffffff] text-xl font-semibold mb-2 line-clamp-2">
-                  {post.title}
-                </h2>
-              )}
+                )}
 
-              {/* Excerpt */}
-              {post.slug ? (
-                <Link href={post.slug}>
-                  <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2 cursor-pointer">
+                {/* Excerpt */}
+                {post.slug ? (
+                  <Link href={`/blog/${post.slug}`}>
+                    <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2 cursor-pointer">
+                      {post.excerpt}
+                    </p>
+                  </Link>
+                ) : (
+                  <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2">
                     {post.excerpt}
                   </p>
-                </Link>
-              ) : (
-                <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2">
-                  {post.excerpt}
-                </p>
-              )}
+                )}
 
-              {/* Footer */}
-              <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
-                <div className="flex items-center gap-1">
-                  <Eye className="w-4 h-4" />
-                  <span>{post.views}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <MessageSquare className="w-4 h-4" />
-                  <span>{post.comments}</span>
+                {/* Footer */}
+                <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
+                  <div className="flex items-center gap-1">
+                    <Eye className="w-4 h-4" />
+                    <span>{post.views}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MessageSquare className="w-4 h-4" />
+                    <span>{post.comments}</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* More Options Button */}
-            <div className="flex-shrink-0">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-[#6e6e6e] hover:text-[#ffffff] hover:bg-[#3a3a3a]"
-              >
-                <MoreVertical className="w-5 h-5" />
-              </Button>
-            </div>
-          </article>
-        ))}
+              {/* More Options Button */}
+              <div className="flex-shrink-0">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-[#6e6e6e] hover:text-[#ffffff] hover:bg-[#3a3a3a]"
+                >
+                  <MoreVertical className="w-5 h-5" />
+                </Button>
+              </div>
+            </article>
+          ))}
         </div>
       </main>
     </div>

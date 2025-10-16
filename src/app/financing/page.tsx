@@ -1,14 +1,24 @@
 import Image from "next/image";
 import ContactSection from "@/components/contact-section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Roofweiler | Finance Your Roof and Windows",
+  description:
+    "Explore flexible financing options with Roofweiler. Our financing page details various plans tailored to make roof replacement and impact windows installation affordable. Serving Miami-Dade, Broward, and Palm Beach counties, we provide solutions that fit your budget without compromising on quality. Discover how easy it is to protect your home with Roofweiler's five-star services, ensuring financial comfort and peace of mind. Start your project today with our supportive financing options.",
+};
 
 export default function Financing() {
   return (
     <main className="min-h-screen bg-[#1a1a1a] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#ffde11] mb-12 text-balance">
-          Payments As Little As $99 Month!
+        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-12 text-balance">
+          Finance Your Roofing and Window Project With RoofWeiler
         </h1>
+        <h2 className="text-4xl sm:text-5xl font-bold text-[#ffde11] mb-12 text-balance">
+          Payments As Little As $99 Month!
+        </h2>
 
         {/* Three Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

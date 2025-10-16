@@ -13,7 +13,9 @@ export default function ContactSection() {
           className="w-full h-[400px] object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-8 md:px-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Contact Us
+          </h2>
           <p className="text-[#ffffff] leading-relaxed mb-8 max-w-2xl">
             We're happy to answer all your questions, address any concerns you
             might have regarding features or pricing. If you're ready, we'll
