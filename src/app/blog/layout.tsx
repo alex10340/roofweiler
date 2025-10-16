@@ -25,7 +25,7 @@ export default function BlogLayout({
     <BlogFilterContext.Provider value={{ activeFilter, setActiveFilter }}>
       {/* Navigation Tabs */}
       <nav className="border-b border-[#2a2a2a] bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4">
           <div className="flex gap-8">
             <button
               onClick={() => handleFilterClick("All Posts")}

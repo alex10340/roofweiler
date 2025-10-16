@@ -15,8 +15,6 @@ const blogPosts = [
     excerpt:
       "Maintaining a clean roof is crucial for homeowners in Miami-Dade, Broward, and Palm Beach Counties.",
     image: "/assets/blog1.webp",
-    views: "12 views",
-    comments: "0 comments",
     slug: "clean-roof-lasts-longer",
   },
   {
@@ -28,8 +26,6 @@ const blogPosts = [
     excerpt:
       "Impact Windows: Providing a robust solution for homeowners looking to protect their homes against severe weather conditions.",
     image: "/assets/blog2.webp",
-    views: "18 views",
-    comments: "0 comments",
     slug: "impact-windows-in-florida",
   },
   {
@@ -41,8 +37,6 @@ const blogPosts = [
     excerpt:
       "Learn about Modified Bitumen Roofing Systems, their benefits, installation, and maintenance, and see if it's the right choice for your property.",
     image: "/assets/blog3.webp",
-    views: "16 views",
-    comments: "0 comments",
     slug: "modified-bitumen-roofing-systems",
   },
   {
@@ -55,8 +49,6 @@ const blogPosts = [
     excerpt:
       "Prepare your home for hurricane season with these essential tips to protect your property. Learn how to stay safe and secure.",
     image: "/assets/blog4.webp",
-    views: "8 views",
-    comments: "0 comments",
     slug: "hurricane-preparation",
   },
   {
@@ -69,8 +61,6 @@ const blogPosts = [
     excerpt:
       "South Florida is a paradise known for its beautiful weather, but it's also a vulnerable to hurricanes. Discover what makes impact windows superior.",
     image: "/assets/blog5.webp",
-    views: "7 views",
-    comments: "0 comments",
     slug: "ultimate-guide-impact-windows",
   },
   {
@@ -83,8 +73,6 @@ const blogPosts = [
     excerpt:
       "Discover the benefits of Impact Windows Replacement. No more worries when hurricanes are approaching.",
     image: "/assets/blog6.webp",
-    views: "8 views",
-    comments: "0 comments",
     slug: "impact-windows-replacement",
   },
   {
@@ -96,8 +84,6 @@ const blogPosts = [
     excerpt:
       "Breaking Down Roofing Replacement Cost: What You Need to Know Are you considering replacing your roof but unsure about the costs involved?",
     image: "/assets/blog7.webp",
-    views: "7 views",
-    comments: "0 comments",
     slug: "roofing-replacement-cost",
   },
   {
@@ -110,8 +96,6 @@ const blogPosts = [
     excerpt:
       "Are you considering a roof replacement for your home? If so, you're probably come across various roofing options, but have you considered metal roofing?",
     image: "/assets/blog8.webp",
-    views: "2 views",
-    comments: "0 comments",
     slug: "metal-roofing-advantages",
   },
   {
@@ -123,8 +107,6 @@ const blogPosts = [
     excerpt:
       "This Ultimate Guide to Roof Maintenance: Image Description: A close-up photo of a well-maintained roof with shingles in various shades of...",
     image: "/assets/blog9.webp",
-    views: "2 views",
-    comments: "0 comments",
     slug: "roof-maintenance-guide",
   },
   {
@@ -136,8 +118,6 @@ const blogPosts = [
     excerpt:
       "Are you in the process of choosing windows for your home? If so, this article will provide you with 10 essential tips to help you make the best...",
     image: "/assets/blog10.webp",
-    views: "1 view",
-    comments: "0 comments",
     slug: "choosing-perfect-windows",
   },
 ];
@@ -152,7 +132,7 @@ export default function BlogListingPage() {
 
   return (
     <div className="min-h-screen bg-[#1a1a1a]">
-      <main className="max-w-7xl mx-auto px-4 py-8">
+      <main className="max-w-5xl mx-auto px-4 py-8">
         <div className="space-y-6">
           {filteredPosts.map((post) => (
             <article
@@ -205,18 +185,18 @@ export default function BlogListingPage() {
                 {/* Excerpt */}
                 {post.slug ? (
                   <Link href={`/blog/${post.slug}`}>
-                    <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2 cursor-pointer">
+                    <p className="max-w-[450px] text-[#a0a09f] text-sm mb-4 line-clamp-2 cursor-pointer">
                       {post.excerpt}
                     </p>
                   </Link>
                 ) : (
-                  <p className="text-[#a0a09f] text-sm mb-4 line-clamp-2">
+                  <p className="max-w-[450px] text-[#a0a09f] text-sm mb-4 line-clamp-2">
                     {post.excerpt}
                   </p>
                 )}
 
                 {/* Footer */}
-                <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
+                {/* <div className="flex items-center gap-4 text-sm text-[#6e6e6e]">
                   <div className="flex items-center gap-1">
                     <Eye className="w-4 h-4" />
                     <span>{post.views}</span>
@@ -225,7 +205,7 @@ export default function BlogListingPage() {
                     <MessageSquare className="w-4 h-4" />
                     <span>{post.comments}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* More Options Button */}
