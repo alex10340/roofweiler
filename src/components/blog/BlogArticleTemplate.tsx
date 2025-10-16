@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export interface BlogSection {
   type: "paragraph" | "heading" | "list" | "numbered-list";
-  content: string | string[];
+  content?: string | string[];
   heading?: string;
   items?: Array<{ title?: string; content: string }>;
 }
