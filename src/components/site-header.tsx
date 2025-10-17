@@ -18,7 +18,7 @@ export default function SiteHeader() {
           <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
             <Link
               href="/special-offers"
-              className="hover:text-[#000000] transition-colors hidden md:inline text-xs sm:text-sm"
+              className="hover:text-[#000000] transition-colors hidden sm:inline text-xs sm:text-sm"
             >
               SPECIAL OFFERS
             </Link>
@@ -30,7 +30,7 @@ export default function SiteHeader() {
             </Link>
             <Link
               href="/service-area"
-              className="hover:text-[#000000] transition-colors hidden lg:inline text-xs sm:text-sm"
+              className="hover:text-[#000000] transition-colors hidden sm:inline text-xs sm:text-sm"
             >
               SERVICE AREA
             </Link>

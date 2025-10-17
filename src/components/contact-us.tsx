@@ -11,7 +11,7 @@ export default function ContactUs() {
           CONTACT US
         </h2>
 
-        <div className="grid md:grid-cols-2 items-start">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left side - Contact Information */}
           <div className="space-y-12 text-white mx-auto mt-8">
             {/* Address */}
@@ -25,7 +25,7 @@ export default function ContactUs() {
 
             {/* Email */}
             <div className="flex items-center gap-4">
-              <Mail className="w-8 h-8 flex-shrink-0" />
+              <Mail className="w-8 h-8 flex-shrink-0 " />
               <a
                 href="mailto:info@roofweiler.com"
                 className="text-2xl font-bold underline hover:text-[#ffde11] transition-colors"
@@ -47,7 +47,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="max-w-[500px]">
+          <div className="max-w-[500px] max-md:mx-auto">
             <ContactForm />
           </div>
         </div>

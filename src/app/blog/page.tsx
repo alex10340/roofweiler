@@ -137,10 +137,10 @@ export default function BlogListingPage() {
           {filteredPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-[#2a2a2a] rounded-lg overflow-hidden flex gap-6 p-6 hover:bg-[#323232] transition-colors"
+              className="bg-[#2a2a2a] rounded-lg overflow-hidden flex flex-col md:flex-row gap-6 p-6 hover:bg-[#323232] transition-colors"
             >
               {/* Post Image */}
-              <div className="flex-shrink-0 w-[186px] h-[140px] relative overflow-hidden rounded">
+              <div className="flex-shrink-0 w-full md:w-[186px] h-[200px] md:h-[140px] relative overflow-hidden rounded">
                 {post.slug ? (
                   <Link href={`/blog/${post.slug}`}>
                     <img
