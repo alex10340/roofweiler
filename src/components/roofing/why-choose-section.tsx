@@ -15,9 +15,9 @@ export default function WhyChooseSection() {
   return (
     <section className="bg-[#1a1a1a] py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-4 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left side - Image */}
-          <div className="order-2 md:order-1">
+          <div className="">
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 text-white">
               Why Choose <span className="text-[#ffde11]">RoofWeiler?</span>
             </h2>
