@@ -38,9 +38,9 @@ export default function WindowsDoorsPage() {
           <SixPs />
         </div>
       </div>
-      <p className="text-white min-h-[120px] h-fit text-center py-[20px] flex items-center justify-center text-[38px] font-bold">
-        <span className="text-[#ffde11]">ROOFWEILER &nbsp;</span> Makes it easy
-        for you!
+      <p className="text-white min-h-[120px] h-fit text-center py-[20px] p-4 text-[38px] font-bold">
+        <span className="text-[#ffde11]">ROOFWEILER</span> Makes it easy for
+        you!
       </p>
       <ProcessSteps />
       <Manufacturers />

@@ -72,21 +72,21 @@ export default function Home() {
             />
 
             {/* Feature Callouts */}
-            <div className="absolute top-[15%] right-[5%] text-white text-sm lg:text-base">
+            <div className="backdrop-blur-md backdrop-brightness-125 p-2 rounded-2xl absolute top-[15%] right-[5%] text-black text-sm lg:text-base">
               <div className="flex items-center gap-2 mb-3">
-                <Check className="size-8 text-white" />
+                <Check className="size-8" />
                 <span>Brilliant Technology</span>
               </div>
               <div className="flex items-center gap-2 mb-3">
-                <Check className="size-8 text-white" />
+                <Check className="size-8 " />
                 <span>Spectralight® Infinity Tubing</span>
               </div>
               <div className="flex items-center gap-2 mb-3">
-                <Check className="size-8 text-white" />
+                <Check className="size-8" />
                 <span>Integrated Solar-Electric Technology</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="size-8 text-white" />
+                <Check className="size-8 " />
                 <span>Decorative Fixtures Deliver It Beautifully.</span>
               </div>
             </div>
@@ -168,7 +168,9 @@ export default function Home() {
                 <div className="w-16 h-1 bg-[#ffde11]"></div>
               </div>
               <p className="text-[#1a1a1a] leading-relaxed">
-                Whether you choose our high-utility dome or our sleek, low-profile collector, you'll benefit from having the most advanced sunlight-capturing technologies available on your roof.
+                Whether you choose our high-utility dome or our sleek,
+                low-profile collector, you'll benefit from having the most
+                advanced sunlight-capturing technologies available on your roof.
               </p>
             </div>
           </div>
@@ -193,7 +195,9 @@ export default function Home() {
                 <div className="w-16 h-1 bg-[#ffde11]"></div>
               </div>
               <p className="text-[#1a1a1a] leading-relaxed">
-                We offer different tubular skylight sizes (160 DS and 290 DS, 10"- and 14"- wide tubes, respectively, with lengths up to 30') to fit different applications and spaces.
+                We offer different tubular skylight sizes (160 DS and 290 DS,
+                10"- and 14"- wide tubes, respectively, with lengths up to 30')
+                to fit different applications and spaces.
               </p>
             </div>
           </div>
@@ -217,7 +221,9 @@ export default function Home() {
                 <div className="w-16 h-1 bg-[#ffde11]"></div>
               </div>
               <p className="text-[#1a1a1a] leading-relaxed">
-                Solatube has leak-proof flashing options to mount its sunlight collectors (standard and low-profile) on any roof type, from shingle to tile, and everything in between.
+                Solatube has leak-proof flashing options to mount its sunlight
+                collectors (standard and low-profile) on any roof type, from
+                shingle to tile, and everything in between.
               </p>
             </div>
           </div>
@@ -242,7 +248,10 @@ export default function Home() {
                 <div className="w-16 h-1 bg-[#ffde11]"></div>
               </div>
               <p className="text-[#1a1a1a] leading-relaxed">
-                We offer a full line of attractive fixtures—both round and square—that create gorgeous spaces in your home with beautiful, diffused light. Our Classic and Architect Series can add style and beauty into any decor.
+                We offer a full line of attractive fixtures—both round and
+                square—that create gorgeous spaces in your home with beautiful,
+                diffused light. Our Classic and Architect Series can add style
+                and beauty into any decor.
               </p>
             </div>
           </div>
@@ -267,7 +276,9 @@ export default function Home() {
                 <div className="w-16 h-1 bg-[#ffde11]"></div>
               </div>
               <p className="text-[#1a1a1a] leading-relaxed">
-                From an integrated solar-powered nightlight to dimming, electric light and ventilation add-ons, you get the options you need to completely control your daylighting environment.
+                From an integrated solar-powered nightlight to dimming, electric
+                light and ventilation add-ons, you get the options you need to
+                completely control your daylighting environment.
               </p>
             </div>
           </div>
