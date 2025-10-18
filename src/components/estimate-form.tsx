@@ -37,7 +37,7 @@ export default function EstimateForm() {
               placeholder="First Name *"
               value={formData.firstName}
               onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
               required
             />
           </div>
@@ -48,7 +48,7 @@ export default function EstimateForm() {
               placeholder="Last name *"
               value={formData.lastName}
               onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
               required
             />
           </div>
@@ -59,7 +59,7 @@ export default function EstimateForm() {
               placeholder="Phone *"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
               required
             />
           </div>
@@ -70,7 +70,7 @@ export default function EstimateForm() {
               placeholder="E-mail *"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
               required
             />
           </div>
@@ -81,7 +81,7 @@ export default function EstimateForm() {
               placeholder="Address *"
               value={formData.address}
               onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+              className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
               required
             />
           </div>
@@ -91,7 +91,7 @@ export default function EstimateForm() {
               value={formData.productOfInterest}
               onValueChange={(value) => setFormData({ ...formData, productOfInterest: value })}
             >
-              <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
+              <SelectTrigger aria-label="Select product of interest" className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-600 text-black">
                 <SelectValue placeholder="Product Of Interest? *" />
               </SelectTrigger>
               <SelectContent>
@@ -115,7 +115,7 @@ export default function EstimateForm() {
               value={formData.projectTimeFrame}
               onValueChange={(value) => setFormData({ ...formData, projectTimeFrame: value })}
             >
-              <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
+              <SelectTrigger aria-label="Select project time frame" className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-600 text-black">
                 <SelectValue placeholder="Project Time Frame?" />
               </SelectTrigger>
               <SelectContent>
@@ -134,7 +134,7 @@ export default function EstimateForm() {
               onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
               className="mt-1 border-gray-400"
             />
-            <label htmlFor="consent" className="text-xs text-gray-500 leading-tight">
+            <label htmlFor="consent" className="text-xs text-gray-700 leading-tight">
               By clicking a submission button, I agree to Consent to receiving personalized marketing text messages and emails. To inform me about booking my free consultation, remind me of meeting, and extend any promotional deal. *
             </label>
           </div>
@@ -147,7 +147,7 @@ export default function EstimateForm() {
           </Button>
 
           <div className="text-center">
-            <a href="#" className="text-xs text-gray-400 inline-flex items-center gap-1">
+            <a href="#" className="text-xs text-gray-600 inline-flex items-center gap-1">
               Report abuse
             </a>
           </div>

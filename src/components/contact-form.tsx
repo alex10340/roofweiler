@@ -42,7 +42,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, firstName: e.target.value })
             }
-            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
             required
           />
         </div>
@@ -55,7 +55,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, lastName: e.target.value })
             }
-            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
             required
           />
         </div>
@@ -68,7 +68,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
             }
-            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
             required
           />
         </div>
@@ -81,7 +81,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
             required
           />
         </div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
             onChange={(e) =>
               setFormData({ ...formData, address: e.target.value })
             }
-            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-400 bg-transparent"
+            className="border-0 border-b-2 border-black rounded-none px-0 focus-visible:ring-0 focus-visible:border-black placeholder:text-gray-600 bg-transparent"
             required
           />
         </div>
@@ -106,7 +106,7 @@ export default function ContactForm() {
               setFormData({ ...formData, productOfInterest: value })
             }
           >
-            <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
+            <SelectTrigger aria-label="Select product of interest" className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-600 text-black">
               <SelectValue placeholder="Product Of Interest? *" />
             </SelectTrigger>
             <SelectContent>
@@ -136,7 +136,7 @@ export default function ContactForm() {
               setFormData({ ...formData, projectTimeFrame: value })
             }
           >
-            <SelectTrigger className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-400 text-black">
+            <SelectTrigger aria-label="Select project time frame" className="border-0 border-b-2 border-black rounded-none px-0 focus:ring-0 bg-transparent data-[placeholder]:text-gray-600 text-black">
               <SelectValue placeholder="Project Time Frame?" />
             </SelectTrigger>
             <SelectContent>
@@ -159,7 +159,7 @@ export default function ContactForm() {
           />
           <label
             htmlFor="consent"
-            className="text-xs text-gray-500 leading-tight"
+            className="text-xs text-gray-700 leading-tight"
           >
             By clicking a submission button, I agree to Consent to receiving
             personalized marketing text messages and emails. To inform me about
@@ -178,7 +178,7 @@ export default function ContactForm() {
         <div className="text-center">
           <a
             href="#"
-            className="text-xs text-gray-400 inline-flex items-center gap-1"
+            className="text-xs text-gray-600 inline-flex items-center gap-1"
           >
             Report abuse
           </a>

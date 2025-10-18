@@ -126,18 +126,27 @@ export default function TestimonialCarousel() {
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="flex justify-center gap-3 mt-12">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`h-2.5 w-2.5 rounded-full border-2 transition-colors cursor-pointer ${
+              className={`p-2 rounded-full transition-colors cursor-pointer ${
                 index === currentIndex
-                  ? "bg-[#ffde11] border-[#ffde11]"
-                  : "bg-transparent border-[#000000]"
+                  ? "bg-transparent"
+                  : "bg-transparent hover:bg-gray-100"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
-            />
+              aria-current={index === currentIndex ? "true" : "false"}
+            >
+              <span
+                className={`block h-2.5 w-2.5 rounded-full border-2 transition-colors ${
+                  index === currentIndex
+                    ? "bg-[#ffde11] border-[#ffde11]"
+                    : "bg-transparent border-[#000000]"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

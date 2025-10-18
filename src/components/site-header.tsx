@@ -29,10 +29,10 @@ export default function SiteHeader() {
               FINANCING
             </Link>
             <Link
-              href="/service-area"
+              href="/service-areas"
               className="hover:text-[#000000] transition-colors hidden sm:inline text-xs sm:text-sm"
             >
-              SERVICE AREA
+              SERVICE AREAS
             </Link>
             {/* <button className="relative hover:text-[#000000] transition-colors">
               <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />

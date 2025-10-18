@@ -1,5 +1,6 @@
 import FAQSection from "@/components/metal-roof/faq-section";
 import QuoteSection from "@/components/quote-section";
+import RoofingGallery from "@/components/roofing-gallery";
 import WhyChooseSection from "@/components/roofing/why-choose-section";
 import SixPs from "@/components/six-ps";
 import BenefitsStoneRoof from "@/components/stone-coated-roof/benefits-stone-roof";
@@ -34,7 +35,7 @@ export default function StoneCoatedRoof() {
       </div>
 
       <FAQSection />
-
+      <RoofingGallery rooftype="stone-coated" />
       <QuoteSection />
     </main>
   );

@@ -2,6 +2,7 @@ import BenefitsMetalRoof from "@/components/metal-roof/benefits-metal-roof";
 import FAQSection from "@/components/metal-roof/faq-section";
 import MetalRoofHero from "@/components/metal-roof/metal-roof-hero";
 import QuoteSection from "@/components/quote-section";
+import RoofingGallery from "@/components/roofing-gallery";
 import WhyChooseSection from "@/components/roofing/why-choose-section";
 import SixPs from "@/components/six-ps";
 import Image from "next/image";
@@ -33,7 +34,7 @@ export default function WindowsDoorsPage() {
       </div>
 
       <FAQSection />
-
+      <RoofingGallery rooftype="metal" />
       <QuoteSection />
     </main>
   );

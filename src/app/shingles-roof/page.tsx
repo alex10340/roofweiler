@@ -1,5 +1,6 @@
 import FAQSection from "@/components/metal-roof/faq-section";
 import QuoteSection from "@/components/quote-section";
+import RoofingGallery from "@/components/roofing-gallery";
 import WhyChooseSection from "@/components/roofing/why-choose-section";
 import BenefitsShingleRoof from "@/components/shingles-roof/benefits-shingle-roof";
 import ShinglesRoofHero from "@/components/shingles-roof/shingles-roof-hero";
@@ -33,7 +34,7 @@ export default function ShinglesRoofPage() {
       </div>
 
       <FAQSection />
-
+      <RoofingGallery rooftype="shingle" />
       <QuoteSection />
     </main>
   );

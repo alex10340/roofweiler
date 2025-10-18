@@ -1,5 +1,6 @@
 import FAQSection from "@/components/metal-roof/faq-section";
 import QuoteSection from "@/components/quote-section";
+import RoofingGallery from "@/components/roofing-gallery";
 import WhyChooseSection from "@/components/roofing/why-choose-section";
 import SixPs from "@/components/six-ps";
 import BenefitsTileRoof from "@/components/tile-roof/benefits-tile-roof";
@@ -33,7 +34,7 @@ export default function WindowsDoorsPage() {
       </div>
 
       <FAQSection />
-
+      <RoofingGallery rooftype="tile" />
       <QuoteSection />
     </main>
   );
