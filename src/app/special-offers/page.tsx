@@ -1,5 +1,6 @@
 import { CreditCard, Gift } from "lucide-react";
 import ContactSection from "@/components/contact-section";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,10 +28,10 @@ export default function Home() {
             pre-approved before your in-home consultation with us, we'll go
             ahead and shave $1,000 off of your roofing or window project.
           </p>
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-transparent border border-[#ffde11] text-[#ffde11] rounded-md hover:bg-[#ffde11] hover:text-[#1a1a1a] transition-colors">
+          <Link href="/financing" className="inline-flex items-center gap-2 px-8 py-3 bg-transparent border border-[#ffde11] text-[#ffde11] rounded-md hover:bg-[#ffde11] hover:text-[#1a1a1a] transition-colors w-fit">
             <CreditCard className="w-5 h-5" />
             Financing Offers
-          </button>
+          </Link>
         </div>
 
         {/* Give $500, Get $500 Referral Program */}
@@ -41,15 +42,16 @@ export default function Home() {
           <p className="text-[#ffffff] leading-relaxed">
             When you refer someone to us and they sign a sales contract for our
             services, they'll receive a $500 discount... and YOU will receive a
-            $500 gift card. Win-Win! Send your friends and family to this page:{" "}
+            $500 gift card. Win-Win!
+             {/* Send your friends and family to this page:{" "}
             <span className="underline">
               Give $500, Get $500 Referral Program
-            </span>
+            </span> */}
           </p>
-          <button className="inline-flex items-center gap-2 px-8 py-3 bg-transparent border border-[#ffde11] text-[#ffde11] rounded-md hover:bg-[#ffde11] hover:text-[#1a1a1a] transition-colors">
+          {/* <button className="inline-flex items-center gap-2 px-8 py-3 bg-transparent border border-[#ffde11] text-[#ffde11] rounded-md hover:bg-[#ffde11] hover:text-[#1a1a1a] transition-colors">
             <Gift className="w-5 h-5" />
             Referral Program
-          </button>
+          </button> */}
         </div>
 
         {/* Military, Police, Firefighter & Teacher Discount */}

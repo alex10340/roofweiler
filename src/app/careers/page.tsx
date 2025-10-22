@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { UserIcon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function RoofWeilerCareers() {
   const [activeTab, setActiveTab] = useState<"sales" | "canvasser">("sales");
@@ -171,11 +170,14 @@ export default function RoofWeilerCareers() {
             </div>
           </div>
 
-          <Link href="#" className="text-center mt-12">
-            <Button className="bg-[#ffde11] text-black hover:bg-[#ffde11]/90 font-bold px-8 h-11 rounded-md">
+          <div className="text-center mt-12">
+            <Button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="bg-[#ffde11] text-black hover:bg-[#ffde11]/90 font-bold px-8 h-11 rounded-md"
+            >
               APPLY FOR JOB!
             </Button>
-          </Link>
+          </div>
         </div>
       </section>
 
